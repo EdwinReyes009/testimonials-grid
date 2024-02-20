@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Testimonials Grid</title>
+
+  <style>
+    :root {
+      /*Primary*/
+      --moderateViolet: hsl(263, 55%, 52%);
+      --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+      --veryDarkBlackishBlue: hsl(219, 29%, 14%);
+      --white: hsl(0, 0%, 100%);
+
+      /*Neutral*/
+      --lightGray: hsl(0, 0%, 81%);
+      --lightGrayishBlue: hsl(210, 46%, 95%);
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+      font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      background-color: var(--lightGrayishBlue);
+      font-size: 1.3rem;
+    }
+
+    article {
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .contenedor-principal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Ajusta la altura al 100% de la ventana */
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .testimoniales {
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 578px) {
+      .testimoniales {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2.5rem;
+      }
+    }
+    
+    .contenido {
+      padding: 2.5rem;
+    }
+   
+    .testimonio {
+      display: flex;
+    }
+
+    .testimonio img {
+      border-radius: 50%;
+      border-width: 20px;
+      border-color: chartreuse;
+      width: 45px;
+      height: 45px;
+    }
+
+    .testimonio .nombre {
+      margin-left: 30px;
+      margin-top: 10px;
+     
+    }
+
+    @media (min-width: 578px) {
+      .testimonio .nombre {
+        margin-left: 30px;
+        margin-top: 10px;
+        line-height: 0.3;
+      }
+    }
+
+    .testimonio h2 {
+      margin-top: 0;
+    }
+    
+    .negritas h1{
+      color: var(--white);
+    }
+
+    @media (min-width: 578px) {
+      .negritas h1{
+        color: var(--white);
+      }
+    }
+
+
+    .parrafo p{
+      color: var(--lightGray);
+      padding-top: 10px;
+      line-height: 1.5;
+    }
+    .violet {
+      background-color: var(--moderateViolet);
+      background-image: url(images/bg-pattern-quotation.svg);
+      background-repeat: no-repeat;
+      background-position-x: 460px;
+      position: relative;
+      z-index: 1;
+    }
+    @media (min-width: 578px) {
+      .violet {
+        background-color: var(--moderateViolet);
+        background-image: url(images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-position-x: 470px;
+        background-size: 115px;
+        grid-column: 1 / 3;
+        position: relative;
+        z-index: 1;
+      }
+    }
+    
+    .gray {
+      background-color: var(--veryDarkGrayishBlue);
+    }
+
+    .white1 {
+      background-color: var(--white);
+    }
+
+    .dark {
+      background-color: var(--veryDarkBlackishBlue);
+      
+    }
+    @media (min-width: 578px) {
+      .dark {
+        background-color: var(--veryDarkBlackishBlue);
+        grid-column: 2 / 4;
+      }
+    }
+
+    .white2 {
+      background-color: var(--white); 
+    }
+    
+    @media (min-width: 578px) {
+      .white2 {
+            background-color: var(--white);
+            grid-column: 4 / 5;
+            grid-row: 1 / 3;
+          }
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="contenedor-principal">
+    <main class="testimoniales">
+
+      <article class="violet">
+        <div class="cuadro">
+
+        </div>
+        
+          <div class="contenido">
+                                
+                <div class="testimonio">
+                  <img src="./images/image-daniel.jpg" alt="img-daniel">
+                  <div class="nombre">
+                    <h2 style="color: var(--white);">Daniel Clifford</h2>
+                    <h3 style="color: var(--lightGray) ;">Verified Graduate</h3>
+                  </div>
+                </div>
+                
+                <div class="negritas">
+                <h1>I received a job offer mid-course, and the subjects I learned
+                 were current, if not more so,in the company I joined. I
+                honestly feel I got every penny’s worth.</h1>
+                </div>
+                
+                <div class="parrafo">
+                  <p>
+                    “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
+                    transition and have heard some people who had an amazing experience here. I signed up
+                    for the free intro course and found it incredibly fun! I enrolled shortly thereafter.
+                    The next 12 weeks was the best - and most grueling - time of my life. Since completing
+                    the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
+                  </p>
+                </div>          
+          </div>
+      </article>
+      
+      <article class="gray">
+        <div class="contenido">
+          <div class="testimonio">
+            <img src="./images/image-jonathan.jpg" alt="img-jonathan">
+            <div class="nombre">
+              <h2 style="color: var(--white);">Jonathan Walters</h2>
+              <h3 style="color: var(--lightGray) ;">Verified Graduate</h3>
+            </div>
+          </div>
+
+          <div class="negritas">
+            <h1>The team was very
+             supportive and kept me
+            motivated</h1>  
+          </div>
+     
+          <div class="parrafo">
+            <p> “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
+              for a big company. This was one of the best investments I’ve made in myself. ”</p>
+          </div>
+        
+        </div>
+      </article>
+
+      <article class="white2">
+        <div class="contenido">
+          <div class="testimonio">
+            <img src="./images/image-kira.jpg" alt="img-kira">
+            <div class="nombre">
+              <h2 style="color: var(--veryDarkGrayishBlue);">Kira Whittle</h2>
+              <h3 style="color: var(--lightGray);">Verified Graduate</h3>
+            </div>
+          </div>
+
+          <h1 style="color: var(--veryDarkGrayishBlue);">Such a life-changing experience. Highly recommended!</h1>
+
+          <div class="parrafo">
+            <p style="color: var(--veryDarkGrayishBlue)"> “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
+              professionals who can help me learn programming step by step. I was encouraged to enroll by a former
+              student of theirs who can only say wonderful things about the program. The entire curriculum and staff
+              did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team
+              project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial
+              could ever have. In fact, I’ve often referred to it during interviews as an example of my developent
+              experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers.
+              100% recommend! ”</p>
+          </div>
+          
+        </div>
+
+      </article>
+
+      <article class="white1">
+        <div class="contenido">
+          <div class="testimonio">
+            <img src="./images/image-jeanette.jpg" alt="img-jeanette">
+            <div class="nombre">
+              <div class="nombre">
+                <h2>Jeanette Harmon</h2>
+                <h3>Verified Graduate</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="negritas">
+            <h1 style="color: var(--veryDarkGrayishBlue);">An overall wonderful 
+           and rewarding
+            experience</h1> 
+          </div>
+         
+         <div class="parrafo">
+          <p style="color: var(--veryDarkGrayishBlue);">“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
+            while doing something I love. ”</p>
+         </div>
+          
+        </div>
+      </article>
+
+      <article class="dark">
+        <div class="contenido">
+          <div class="testimonio">
+            <img src="./images/image-patrick.jpg" alt="img-patrick">
+            <div class="nombre">
+              <h2 style="color: var(--white);">Patrick Abrams</h2>
+              <h3 style="color: var(--lightGray);">Verified Graduate</h3>
+            </div>
+          </div>
+
+          <div class="negritas">
+            <h1>Awesome teaching support from TAs who did the bootcamp
+            themselves. Getting guidance from them and learning from
+            their experiences was easy.</h1> 
+          </div>
+            
+            <div class="parrafo">
+               <p> “ The staff seem genuinely concerned about my progress which I find really refreshing. The program
+            gave me the confidence necessary to be able to go out in the world and present myself as a capable
+            junior developer. The standard is above the rest. You will get the personal attention you need from
+            an incredible community of smart and amazing people. ”</p>
+            </div>
+      
+        </div>
+      </article>
+    </main>
+  </div>
+</body>
+
+</html>
